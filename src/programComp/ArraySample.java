@@ -3,11 +3,7 @@ package programComp;
 import java.util.*;
 
 public class ArraySample {
-	
-	
-	
-	
-	
+
 	
 	/*
 	 * input : grid with 0 when there is no path, 1 when there is a path.
