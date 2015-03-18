@@ -95,20 +95,26 @@ public class ArraySample {
 	 * Returns an array of all duplicates in an unsorted array.
 	 * Time complexity is O(n)
 	 *	Space complexity is O(n) or 3n. One each for input, return and hash-table
+	 *	if we return a list, then we return only duplicate elements instead of returning a whole array.
+	 *	there are chances that not complete array is duplicate.
 	 * 
 	 */
-	public int[] GetAllDuplicates(int[] inputArray)
+	public ArrayList<Integer> GetAllDuplicates(int[] inputArray)
 	{
 		//ad-hoc storage for distinct records found till now. Better for lookup
-		Hashtable<Integer, Integer> tempHashtable=new Hashtable<Integer,Integer>();
-		int[] returnArray=new int[inputArray.length];
-		int j=0;
+		//capacity of HashTable can be reduced, if number of duplicates are known to be more.
+		Hashtable<Integer, Integer> tempHashtable=new Hashtable<Integer,Integer>(inputArray.length);
+		ArrayList<Integer> output=new ArrayList<Integer>();
 		//loop through
 		for(int i=0;i<inputArray.length;i++)
 		{
 			if(tempHashtable.containsKey(inputArray[i]))
 			{
-				returnArray[j++]=inputArray[i];
+				if(tempHashtable.get(inputArray[i])==1)
+				{
+					output.add(inputArray[i]);
+				}
+				tempHashtable.put(inputArray[i],tempHashtable.get(inputArray[i])+1);
 			}
 			else
 			{
@@ -116,6 +122,7 @@ public class ArraySample {
 				tempHashtable.put(inputArray[i],1);
 			}
 		}
-		return returnArray;
+		return output;
 	}
+
 }
