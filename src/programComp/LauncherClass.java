@@ -15,12 +15,26 @@ public class LauncherClass {
 	 */
 	public static void main(String[] args) {
 		
-		HeapSample heapSample=new HeapSample();
+		ArrayList<Integer> list1=new ArrayList<Integer>();
+		list1.add(2);
+		list1.add(4);
+		list1.add(6);
+		list1.add(8);
+		
+		ArrayList<Integer> list2=new ArrayList<Integer>();
+		list2.add(1);
+		list2.add(3);
+		list2.add(5);
+		list2.add(7);
+		System.out.println(LinkedListSample.SortList(list1, list2));
+		
+		
+		/*HeapSample heapSample=new HeapSample();
 		int[] a=heapSample.returnSort();
 		for(int i:a)
 		{
 			System.out.println(i);
-		}
+		}*/
 		
 		/*
 		ArraySample arraySample=new ArraySample();
