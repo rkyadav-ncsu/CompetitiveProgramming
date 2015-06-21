@@ -15,19 +15,13 @@ public class LauncherClass {
 	 */
 	public static void main(String[] args) {
 		
-		ArrayList<Integer> list1=new ArrayList<Integer>();
-		list1.add(2);
-		list1.add(4);
-		list1.add(6);
-		list1.add(8);
-		
-		ArrayList<Integer> list2=new ArrayList<Integer>();
-		list2.add(1);
-		list2.add(3);
-		list2.add(5);
-		list2.add(7);
-		System.out.println(LinkedListSample.SortList(list1, list2));
-		
+		CardShuffle sc=new CardShuffle();
+		int i=0;
+		while(i<=52)
+		{
+		int iterator=sc.ShuffleCounter(i);
+		System.out.println(i++ +" : "+ iterator);
+		}
 		
 		/*HeapSample heapSample=new HeapSample();
 		int[] a=heapSample.returnSort();
