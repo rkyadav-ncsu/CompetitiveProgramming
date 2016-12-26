@@ -13,7 +13,9 @@ public class GoodCubeRoot {
 			int input=sc.nextInt();
 			while(input!=0)
 			{
-				if(input%2==0)
+				if(input%2==0){
+					
+				}
 					
 			}
 			

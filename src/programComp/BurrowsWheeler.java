@@ -1,4 +1,4 @@
-
+package programComp;
 import java.util.*;
 
 public class BurrowsWheeler {
